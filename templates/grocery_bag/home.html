@@ -140,7 +140,7 @@
                         <p class="mt-0"><span class="{{ grocery.item_status }} fw-bold">
                                 {{ grocery.item_status }}</span> </p>
                         <a href="{% url 'g_bag:grocery_edit' grocery.pk  %}" class="btn btn-outline-info">Update</a>
-                        <a href="{% url 'g_bag:grocery_delete' grocery.pk  %}" class="btn btn-outline-info">Delete</a>
+                        <a href="{% url 'g_bag:grocery_delete' grocery.pk  %}" class="btn btn-outline-danger">Delete</a>
                     </div>
                 </div>
             </div>
