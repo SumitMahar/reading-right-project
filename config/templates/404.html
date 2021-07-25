@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container align-items-center">
+    <h2>404</h2>
+    <p>We could not find the page you were looking for.</p>
+    <a class='btn btn-outline-info btn-sm' href="{% url 'g_bag:home' %}">Go to home page</a>
+</div>
+
+{% endblock content %}

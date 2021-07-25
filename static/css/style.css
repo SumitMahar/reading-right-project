@@ -1,0 +1,27 @@
+body::before {
+    display: block;
+    content: '';
+    height: 60px;
+}
+
+.BOUGHT {
+    color: rgb(148, 212, 52);
+}
+
+.PENDING {
+    color: cornflowerblue;
+}
+
+.NOT-AVAILABLE {
+    color: rgb(196, 26, 60);
+}
+
+.shopping2 {
+    max-height: 420px;
+}
+
+@media(min-width: 768px) {
+    .email-input {
+        width: 50%;
+    }
+}

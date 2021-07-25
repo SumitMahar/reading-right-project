@@ -1,0 +1,50 @@
+{% extends 'accounts/base.html' %}
+{% block title %}{{ article.title }}{% endblock title %}
+
+
+<!-- Jumbo block -->
+{% block jumbo %}
+<p class="mt-4 mb-0">Back to <a href="{% url 'articles:article_list' %}">All Articles</a>.
+</p>
+{% endblock jumbo %}
+
+
+{% block content %}
+<div class="card my-5">
+
+    <div class="card-header">
+        <h2>{{ article.title }}</h2>
+        <span>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            {{ article.author }} | <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+            {{ article.date|date:'F d, Y' }}
+        </span>
+        <div class="my-1">
+            {% if user == article.author %}
+            <a class="btn-sm primary text-white shadow" href="{% url 'articles:article_edit' article.pk %}"><i
+                    class="fas fa-pen"></i></i>
+                Edit</a>
+
+            <a class='btn-sm shadow btn-danger' href="{% url 'articles:article_delete' article.pk %}"><i
+                    class="fas fa-trash"></i>
+                Delete</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="card-body">
+        <p>{{ article.body|safe }}</p>
+    </div>
+    <div class="card-footer">
+        <p class="text-muted mb-1"> <i class="fa fa-comment" aria-hidden="true"></i> Comments</p>
+        {% for comment in article.comment_set.all %}
+        <p>
+            <span class="font-weight-bold"> {{ comment.author }} - </span>
+            {{ comment }}
+        </p>
+        {% empty %}
+        <p>Such Empty :)</p>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock content %}

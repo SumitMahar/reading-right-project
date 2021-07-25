@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock title %}
+
+{% block content %}
+<!-- contact -->
+<section class="p-5">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-md">
+                <h2 class="text-center mb-4">
+                    Contact Info
+                </h2>
+                <ul class="list-group list-group-flush lead">
+                    <li class="list-group-item">
+                        <span class="fw-bold">
+                            Main Location :
+                        </span>53 main st Delhi DL
+                    </li>
+                    <li class="list-group-item">
+                        <span class="fw-bold">
+                            Contact:
+                        </span>
+                        (9620-9832-23)
+                    </li>
+                    <li class="list-group-item">
+                        <span class="fw-bold">
+                            Info email :
+                        </span>info@Grobag.com
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md">
+                <img src="{% static 'img/g_bag.svg'  %}" class="img-fluid" alt="">
+
+            </div>
+        </div>
+    </div>
+</section>
+<div class="my-5"></div>
+{% endblock content %}

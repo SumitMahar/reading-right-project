@@ -1,0 +1,35 @@
+{% extends 'accounts/base.html' %}}
+
+{% block title %}PyCoder | Articles{% endblock title %}Articles
+
+
+<!-- Jumbo block -->
+{% block jumbo %}
+<h3 class="mt-4 mb-0 text-center">
+    <a class="text-muted" href="{{ status }}">Articles</a>
+</h3>
+{% endblock jumbo %}
+
+<!-- Content block -->
+{% block content %}
+
+<div class="row my-5">
+    {% for grocery in grocerye_list %}
+    <div class="col-md-6 mb-5">
+        <div class="card shadow h-100">
+            <div class="card-body">
+                <a href="">
+                    <h3 class="text-dark">{{ grocery.item_name }}</h3>
+                </a>
+
+                <a class="btn primary text-white" href="">
+                    Read more
+                </a>
+            </div>
+        </div>
+        <br />
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}
