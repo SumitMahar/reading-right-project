@@ -1,17 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="row align-items-center justify-content-between mx-auto m-5">
-    <div class="col"></div>
-    <div class="col shadow align-items-center p-4">
+<div class="container">
+    <div class="row align-items-center justify-content-between mx-auto m-5">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 shadow align-items-center p-4">
 
-        <h1 class="text-center">Delete</h1>
-        <form action="" method="post">
-            {% csrf_token %}
-            <p>Are you sure you want to delete "{{ grocery.item_name }}"?</p>
-            <button class="btn btn-outline-danger mb-2" type="submit">Confirm</button>
-        </form>
+            <h1 class="text-center">Delete</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+                <p>Are you sure you want to delete "{{ grocery.item_name }}"?</p>
+                <button class="btn btn-outline-danger mb-2" type="submit">Confirm</button>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
     </div>
-    <div class="col"></div>
 </div>
+
 {% endblock content %}
